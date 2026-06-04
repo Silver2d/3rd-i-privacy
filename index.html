@@ -103,7 +103,7 @@
         <div class="header">
             <div class="logo">3rd-i</div>
             <div class="tagline">Privacy-First Device Security</div>
-            <div class="last-updated">Privacy Policy — Last updated: May 2026</div>
+            <div class="last-updated">Privacy Policy — Last updated: June 2026</div>
         </div>
 
         <div class="highlight-box">
@@ -152,8 +152,8 @@
         <p>All local data is encrypted using AES-256-GCM tied to your device's hardware keystore. You can clear all stored data at any time from the Settings screen.</p>
 
         <h2>No Internet Connection Required</h2>
-        <p>3rd-i is fully offline. The app requires no internet connection to function. All threat detection, behavioral analysis, and security monitoring operates entirely on your device using locally stored threat databases and detection algorithms.</p>
-        <p>The app does not make any network requests. There are no servers to send data to even if we wanted to — which we don't.</p>
+        <p>3rd-i is fully offline for all security monitoring and threat detection. All behavioral analysis, cryptographic checking, and threat identification operates entirely on your device using locally stored databases and detection algorithms.</p>
+        <p>When the optional DNS Shield feature is enabled, the app forwards non-blocked DNS queries to a standard DNS resolver (8.8.8.8) on your behalf — identical to what your device does normally without 3rd-i installed. No personal data, behavioral data, or threat information is included in these requests. The DNS Shield can be disabled at any time from the dashboard, and all security features continue to function fully without it.</p>
 
         <h2>Third Parties</h2>
         <p>3rd-i shares no data with any third parties. There are no analytics SDKs, no advertising networks, no crash reporting services, and no third-party integrations of any kind embedded in the application.</p>
@@ -166,6 +166,7 @@
             <li><strong style="color:#00D4FF">ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE</strong> — Required to detect evil twin WiFi attacks and monitor network connections</li>
             <li><strong style="color:#00D4FF">READ_PHONE_STATE</strong> — Required to detect SIM swap attacks by monitoring SIM card identity</li>
             <li><strong style="color:#00D4FF">POST_NOTIFICATIONS</strong> — Required to alert you when threats are detected</li>
+            <li><strong style="color:#00D4FF">BIND_VPN_SERVICE</strong> — Required for the optional DNS Shield feature, which creates a local VPN tunnel entirely on your device to intercept and sinkhole tracker DNS requests to 127.0.0.1. All DNS processing happens on-device only. No DNS queries, domain names, or any other data are transmitted to external parties by 3rd-i.</li>
         </ul>
         <p>No permissions are used for any purpose other than the security monitoring described above.</p>
 
