@@ -13,10 +13,7 @@
             line-height: 1.7;
             padding: 40px 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .container { max-width: 800px; margin: 0 auto; }
         .header {
             text-align: center;
             margin-bottom: 48px;
@@ -30,15 +27,8 @@
             letter-spacing: -1px;
             margin-bottom: 8px;
         }
-        .tagline {
-            color: #8A9BB5;
-            font-size: 15px;
-        }
-        .last-updated {
-            color: #8A9BB5;
-            font-size: 13px;
-            margin-top: 8px;
-        }
+        .tagline { color: #8A9BB5; font-size: 15px; }
+        .last-updated { color: #8A9BB5; font-size: 13px; margin-top: 8px; }
         h2 {
             color: #00D4FF;
             font-size: 18px;
@@ -47,11 +37,7 @@
             padding-bottom: 6px;
             border-bottom: 1px solid #1A2540;
         }
-        p {
-            color: #c0cce0;
-            margin-bottom: 14px;
-            font-size: 15px;
-        }
+        p { color: #c0cce0; margin-bottom: 14px; font-size: 15px; }
         .highlight-box {
             background: rgba(0, 212, 255, 0.06);
             border: 1px solid rgba(0, 212, 255, 0.2);
@@ -59,20 +45,9 @@
             padding: 20px 24px;
             margin: 24px 0;
         }
-        .highlight-box p {
-            color: #00D4FF;
-            font-weight: 500;
-            margin: 0;
-            font-size: 15px;
-        }
-        ul {
-            margin: 10px 0 16px 20px;
-        }
-        li {
-            color: #c0cce0;
-            font-size: 15px;
-            margin-bottom: 8px;
-        }
+        .highlight-box p { color: #00D4FF; font-weight: 500; margin: 0; font-size: 15px; }
+        ul { margin: 10px 0 16px 20px; }
+        li { color: #c0cce0; font-size: 15px; margin-bottom: 8px; }
         .contact {
             background: #0F1628;
             border-radius: 12px;
@@ -80,13 +55,8 @@
             margin-top: 40px;
             text-align: center;
         }
-        .contact p {
-            margin: 0;
-        }
-        .contact a {
-            color: #00D4FF;
-            text-decoration: none;
-        }
+        .contact p { margin: 0; }
+        .contact a { color: #00D4FF; text-decoration: none; }
         .footer {
             text-align: center;
             margin-top: 48px;
@@ -103,7 +73,7 @@
         <div class="header">
             <div class="logo">3rd-i</div>
             <div class="tagline">Privacy-First Device Security</div>
-            <div class="last-updated">Privacy Policy — Last updated: June 2026</div>
+            <div class="last-updated">Privacy Policy — Last updated: August 2026</div>
         </div>
 
         <div class="highlight-box">
@@ -114,18 +84,19 @@
         <p>3rd-i is a privacy-first Android security application that monitors your device for threats entirely on-device. We built 3rd-i on a single principle: your data belongs to you. We have no servers, no accounts, no analytics, and no way to see anything about you or your device.</p>
 
         <h2>What Data 3rd-i Collects</h2>
-        <p>3rd-i collects no personal data whatsoever. The app operates entirely on your device and never transmits any information anywhere.</p>
-        <p>The following data is processed locally on your device only, and is never transmitted, stored externally, or shared:</p>
+        <p>3rd-i collects no personal data whatsoever. The app operates entirely on your device and never transmits any information about you to us or to any third party.</p>
+        <p>The following data is processed locally on your device only, and is never transmitted to us, stored externally, or shared:</p>
         <ul>
             <li>Device behavioral patterns used to establish your personal baseline</li>
             <li>App integrity fingerprints (cryptographic hashes of installed apps)</li>
-            <li>Network connection metadata (IP ranges, DNS queries) checked against local threat database</li>
+            <li>Network connection metadata (IP ranges, DNS queries) checked against a local threat database</li>
             <li>SIM card serial number (stored locally to detect SIM swap attacks)</li>
             <li>Clipboard content (monitored locally to detect crypto address swapping)</li>
             <li>Screen overlay information (checked locally to detect fake login screens)</li>
             <li>Device administrator status (checked locally to detect unauthorized MDM enrollment)</li>
+            <li>Web page content and requests within the built-in Private Browser (processed locally to filter ads and trackers — see the Private Browser section below)</li>
         </ul>
-        <p>All of this data is processed in RAM or encrypted local storage only. None of it ever leaves your device.</p>
+        <p>All of this data is processed in RAM or encrypted local storage only. None of it is ever sent to us or to any third party.</p>
 
         <h2>What Data 3rd-i Does NOT Collect</h2>
         <ul>
@@ -134,12 +105,22 @@
             <li>No contact information</li>
             <li>No message or call content</li>
             <li>No photos or media</li>
-            <li>No browsing history</li>
+            <li>No browsing history retained after a session ends (see Private Browser below)</li>
             <li>No account credentials</li>
             <li>No device identifiers (IMEI, advertising ID, etc.)</li>
             <li>No usage analytics or telemetry</li>
             <li>No crash reports sent externally</li>
         </ul>
+
+        <h2>Private Browser</h2>
+        <p>3rd-i includes an optional built-in Private Browser designed for zero-trace, ad- and tracker-filtered browsing. It is important to us that its privacy behavior is described accurately:</p>
+        <ul>
+            <li><strong style="color:#00D4FF">What it processes locally:</strong> To filter ads and trackers, the browser inspects the web pages you visit and the network requests those pages make, entirely on your device. This includes rewriting video stream manifests and player responses to remove ad segments, and hiding ad elements on the page.</li>
+            <li><strong style="color:#00D4FF">What it keeps:</strong> Nothing after your session ends. When you leave the browser, its cache, cookies, and history are cleared automatically. The browser is designed to leave no trace of what you visited.</li>
+            <li><strong style="color:#00D4FF">What it sends:</strong> The browser sends nothing about your browsing to us or to any third party. The only network traffic is the ordinary traffic your browsing already generates — loading the sites you choose to visit — exactly as any browser does. 3rd-i adds no tracking, logging, or reporting of its own.</li>
+            <li><strong style="color:#00D4FF">Counters shown in the browser</strong> (such as ads or trackers filtered) are calculated and displayed on your device only, and are not retained after the session or transmitted anywhere.</li>
+        </ul>
+        <p>In short: the Private Browser processes browsing locally to protect you, keeps nothing when you leave, and reports nothing to anyone.</p>
 
         <h2>Local Storage</h2>
         <p>3rd-i stores data locally on your device using Android's encrypted storage system. This includes:</p>
@@ -148,39 +129,41 @@
             <li>Device baseline — behavioral patterns learned during the 72-hour setup period</li>
             <li>Trusted network fingerprints — WiFi networks you have marked as trusted</li>
             <li>App integrity fingerprints — cryptographic hashes of your installed apps</li>
+            <li>Private Browser preferences — such as your saved quick-access sites (the sites you visit are not stored)</li>
         </ul>
         <p>All local data is encrypted using AES-256-GCM tied to your device's hardware keystore. You can clear all stored data at any time from the Settings screen.</p>
 
         <h2>No Internet Connection Required</h2>
         <p>3rd-i is fully offline for all security monitoring and threat detection. All behavioral analysis, cryptographic checking, and threat identification operates entirely on your device using locally stored databases and detection algorithms.</p>
-        <p>When the optional DNS Shield feature is enabled, the app forwards non-blocked DNS queries to a standard DNS resolver (8.8.8.8) on your behalf — identical to what your device does normally without 3rd-i installed. No personal data, behavioral data, or threat information is included in these requests. The DNS Shield can be disabled at any time from the dashboard, and all security features continue to function fully without it.</p>
+        <p>When the optional DNS Shield feature is enabled, the app forwards non-blocked DNS queries to a standard public DNS resolver (such as 8.8.8.8) on your behalf — identical to what your device does normally without 3rd-i installed. No personal data, behavioral data, or threat information is included in these requests. The DNS Shield can be disabled at any time from the dashboard, and all security features continue to function fully without it.</p>
 
         <h2>Third Parties</h2>
         <p>3rd-i shares no data with any third parties. There are no analytics SDKs, no advertising networks, no crash reporting services, and no third-party integrations of any kind embedded in the application.</p>
 
-        <h2>Permissions</h2>
+        <h2>Permissions &amp; Sensitive Data Disclosures</h2>
         <p>3rd-i requests the following Android permissions, all used exclusively for on-device security monitoring:</p>
         <ul>
-            <li><strong style="color:#00D4FF">FOREGROUND_SERVICE</strong> — Required to run the Guardian monitoring service in the background</li>
-            <li><strong style="color:#00D4FF">RECEIVE_BOOT_COMPLETED</strong> — Allows the Guardian service to restart after device reboot</li>
-            <li><strong style="color:#00D4FF">ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE</strong> — Required to detect evil twin WiFi attacks and monitor network connections</li>
-            <li><strong style="color:#00D4FF">READ_PHONE_STATE</strong> — Required to detect SIM swap attacks by monitoring SIM card identity</li>
-            <li><strong style="color:#00D4FF">POST_NOTIFICATIONS</strong> — Required to alert you when threats are detected</li>
-            <li><strong style="color:#00D4FF">BIND_VPN_SERVICE</strong> — Required for the optional DNS Shield feature, which creates a local VPN tunnel entirely on your device to intercept and sinkhole tracker DNS requests to 127.0.0.1. All DNS processing happens on-device only. No DNS queries, domain names, or any other data are transmitted to external parties by 3rd-i.</li>
+            <li><strong style="color:#00D4FF">FOREGROUND_SERVICE / FOREGROUND_SERVICE_SPECIAL_USE</strong> — Required to run the Guardian monitoring service continuously so protection stays active. The special-use foreground service type is declared because 3rd-i performs ongoing local security monitoring that does not fit Android's other predefined service categories.</li>
+            <li><strong style="color:#00D4FF">RECEIVE_BOOT_COMPLETED</strong> — Allows the Guardian service to restart after device reboot.</li>
+            <li><strong style="color:#00D4FF">ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE</strong> — Required to detect evil twin WiFi attacks and monitor network connections.</li>
+            <li><strong style="color:#00D4FF">READ_PHONE_STATE</strong> — Required to detect SIM swap attacks by monitoring SIM card identity.</li>
+            <li><strong style="color:#00D4FF">POST_NOTIFICATIONS</strong> — Required to alert you when threats are detected.</li>
+            <li><strong style="color:#00D4FF">PACKAGE_USAGE_STATS (Usage Access)</strong> — An optional permission you grant manually in Android Settings. Used locally to monitor for permission changes and app behavior anomalies. If not granted, related detections are reduced but the app continues to function.</li>
+            <li><strong style="color:#00D4FF">BIND_VPN_SERVICE (DNS Shield)</strong> — Required for the optional DNS Shield feature, which creates a local, on-device loopback VPN tunnel to intercept tracker DNS requests and sinkhole them to 127.0.0.1. This is used solely to identify and block tracker and ad domains on-device. DNS queries are inspected locally to make block/allow decisions and are never logged to any server, stored beyond a short in-memory activity buffer you can view in the app, or transmitted to us or any third party. 3rd-i does not route your general web traffic through this tunnel, does not decrypt traffic, and does not use the VPN to collect or monetize any data.</li>
         </ul>
         <p>No permissions are used for any purpose other than the security monitoring described above.</p>
 
         <h2>Children's Privacy</h2>
-        <p>3rd-i does not collect any data from any users, including children. The app is designed for general use and complies with COPPA by virtue of collecting no personal information from anyone.</p>
+        <p>3rd-i does not collect any data from any users, including children. The app complies with COPPA and applicable global privacy regulations by virtue of collecting no personal information from anyone.</p>
 
         <h2>Changes to This Policy</h2>
-        <p>If we make changes to this privacy policy, we will update the date at the top of this page. Since we collect no data, changes would only affect how we describe our practices, not what we actually do with your information.</p>
+        <p>If we make changes to this privacy policy, we will update the date at the top of this page, and note significant changes in the app's update notes. Since we collect no data, changes will only affect how we describe our local practices, not what we actually do with your information.</p>
 
         <h2>Your Rights</h2>
         <p>Since 3rd-i collects no personal data, there is nothing to access, correct, export, or delete. You can clear all locally stored app data at any time using the "Clear All Data" option in the app's Settings screen, or by uninstalling the app.</p>
 
         <div class="contact">
-            <p>Questions about this privacy policy?<br>
+            <p>Questions or concerns about this privacy policy or 3rd-i's local data practices?<br>
             Contact: <a href="mailto:lyrasolcustoms@gmail.com">lyrasolcustoms@gmail.com</a></p>
         </div>
 
